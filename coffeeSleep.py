@@ -4,17 +4,17 @@ import csv
 import numpy as np
 
 def getData(path):
-    temp=[]
-    ice=[]
+    coffee=[]
+    sleep=[]
 
     with open(path) as f:
         read=csv.DictReader(f)
         fileData=list(read) #.pop(0)
 
         for i in fileData:
-            temp.append(float(i['Coffee in ml']))
-            ice.append(float(i['sleep in hours']))
-    return(temp,ice)
+            coffee.append(float(i['Coffee in ml']))
+            sleep.append(float(i['sleep in hours']))
+    return(coffee,sleep)
 
 
 def findCorrelation(dataSrc):
